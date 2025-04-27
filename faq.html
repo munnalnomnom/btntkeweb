@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | HexonStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS cho trang FAQ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .featured-title {
+            color: #ffffff;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .faq-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        .faq {
+            margin-bottom: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .accordion {
+            background-color: #94b4f9;
+            color: #0f2167;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+        
+        .accordion:hover {
+            background-color: #d4e0ff;
+        }
+        
+        .accordion.active {
+            background-color: #c9d6f8;
+        }
+        
+        .accordion i {
+            transition: transform 0.3s ease;
+            color: #0f2167;
+            font-size: 18px;
+        }
+        
+        .accordion.active i {
+            transform: rotate(180deg);
+        }
+        
+        .panel {
+            padding: 0 15px;
+            background-color: #f8f9fb;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .panel p {
+            padding: 15px 0;
+            margin: 0;
+            line-height: 1.7;
+            font-size: 16px;
+            color: #222;
+            font-weight: 500;
+        }
+        
+        /* Viền phân cách các mục */
+        .faq-divider {
+            height: 1px;
+            background-color: #e5e7eb;
+            margin: 40px 0;
+        }
+        
+        /* Hỗ trợ khách hàng */
+        .support-info {
+            background-color: #e9f0ff;
+            padding: 25px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 40px;
+            border: 1px solid #c9d6f8;
+        }
+        
+        .support-info h3 {
+            color: #0f2167;
+            margin-bottom: 12px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .support-info p {
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .contact-method i {
+            color: #0f2167;
+            font-size: 20px;
+        }
+        
+        .contact-method span {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar-->
+    <div class="navbar">
+        <nav>
+            <div class="logo-container">
+                <a href="homepage.html" class="logo">
+                    <img src="image/logo.svg" alt="logo" width="45px">
+                    <span class="logo-text">HEXONSTORE</span>
+                </a>
+            </div>
+            
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                <li><a href="tintuc.html">TIN TỨC</a></li>
+                <li><a href="tuyendung.html">TUYỂN DỤNG</a></li>
+                <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="login.html">ĐĂNG NHẬP</a></li>
+            </ul>
+            
+            <a href="giohang.html" class="cart-icon">
+                <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+            </a>
+        </nav>
+    </div>
+    <script src="js/navbar.js"></script>
+    <div class="container">
+        <h2 class="featured-title">Câu Hỏi Thường Gặp</h2>
+        
+        <div class="faq-wrapper">
+            <!-- Bảo hành -->
+            <div id="warranty" class="section-anchor"></div>
+            <div class="faq">
+                <button class="accordion">
+                    Chính sách bảo hành điện thoại như thế nào?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>
+                        Tại HexonStore, chúng tôi cam kết mang đến cho khách hàng chính sách bảo hành rõ ràng và minh bạch. Tất cả điện thoại mua tại cửa hàng đều được bảo hành theo tiêu chuẩn của nhà sản xuất, với thời gian từ 6 đến 12 tháng tùy theo từng dòng sản phẩm. Trong thời gian bảo hành, nếu điện thoại gặp lỗi kỹ thuật do nhà sản xuất, HexonStore sẽ hỗ trợ kiểm tra, sửa chữa hoặc đổi máy theo quy định. Quý khách cần giữ hóa đơn mua hàng và tem bảo hành còn nguyên vẹn để được hỗ trợ tốt nhất. Đối với các lỗi do người dùng như rơi vỡ, vào nước hay can thiệp phần mềm trái phép, chính sách bảo hành sẽ không được áp dụng. Nếu cần thêm thông tin chi tiết, quý khách có thể liên hệ trực tiếp nhân viên tại cửa hàng hoặc qua các kênh hỗ trợ của HexonStore.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Đơn hàng -->
+            <div id="buy" class="section-anchor"></div>
+            <div class="faq">
+                <button class="accordion">
+                    Tôi có thể hủy đơn hàng sau khi đặt không?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>
+                        Tại HexonStore, quý khách hoàn toàn có thể yêu cầu hủy đơn hàng sau khi đặt trong một khoảng thời gian nhất định. Cụ thể, đơn hàng chỉ có thể được hủy khi chưa được đóng gói và chuyển sang trạng thái vận chuyển. Để hủy đơn, quý khách vui lòng liên hệ với bộ phận chăm sóc khách hàng của HexonStore qua số điện thoại, fanpage hoặc email sớm nhất có thể sau khi đặt hàng. Sau khi đơn hàng đã được giao cho đơn vị vận chuyển, việc hủy sẽ không còn hiệu lực và quý khách cần nhận hàng như bình thường rồi tiến hành đổi trả nếu có nhu cầu. HexonStore luôn cố gắng xử lý các yêu cầu hủy đơn nhanh chóng và linh hoạt để mang lại trải nghiệm tốt nhất cho khách hàng.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Đổi trả -->
+            <div id="return" class="section-anchor"></div>
+            <div class="faq">
+                <button class="accordion">
+                    Tôi có thể đổi trả sản phẩm trong bao lâu?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>
+                        HexonStore hỗ trợ đổi trả sản phẩm trong vòng 7 ngày kể từ ngày nhận hàng đối với các sản phẩm bị lỗi kỹ thuật, giao sai mẫu hoặc không đúng mô tả. Sản phẩm cần giữ nguyên trạng thái ban đầu, không bị trầy xước hay can thiệp kỹ thuật, kèm theo đầy đủ hóa đơn và phụ kiện. Đối với các lý do đổi trả không phải do lỗi của HexonStore, khách hàng có thể chịu thêm một khoản phí vận chuyển hoặc xử lý đơn hàng. Mọi trường hợp sẽ được kiểm tra và hỗ trợ nhanh chóng, minh bạch.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Giao hàng -->
+            <div class="faq">
+                <button class="accordion">
+                    HexonStore có giao hàng toàn quốc không?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>
+                        HexonStore hiện hỗ trợ giao hàng trên toàn quốc thông qua các đối tác vận chuyển uy tín. Thời gian giao hàng từ 1–5 ngày làm việc tùy vào khu vực và địa chỉ nhận hàng. Đơn hàng sẽ được đóng gói cẩn thận, đảm bảo nguyên vẹn khi đến tay khách. Quý khách sẽ nhận được mã vận đơn để theo dõi lộ trình giao hàng và có thể liên hệ ngay nếu gặp bất kỳ vấn đề gì trong quá trình nhận hàng.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trả góp -->
+            <div class="faq">
+                <button class="accordion">
+                    HexonStore có hỗ trợ trả góp không?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="panel">
+                    <p>
+                        Hiện tại, HexonStore có hỗ trợ hình thức mua hàng trả góp qua thẻ tín dụng của nhiều ngân hàng hoặc qua các đối tác tài chính uy tín. Thủ tục đơn giản, duyệt nhanh, khách hàng chỉ cần có thẻ tín dụng hợp lệ hoặc giấy tờ cá nhân cơ bản. Các gói trả góp có kỳ hạn linh hoạt từ 3 đến 12 tháng, lãi suất ưu đãi, tùy theo chương trình áp dụng tại thời điểm mua hàng. Quý khách có thể liên hệ trực tiếp để được tư vấn chi tiết trước khi thanh toán.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="support-info">
+            <h3>Cần hỗ trợ thêm?</h3>
+            <p style="color:#222;">Liên hệ với chúng tôi qua:</p>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <span>Hotline: 123456789</span>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email: info@hexonstore.com</span>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-facebook-messenger"></i>
+                    <span>Chat: Fanpage HexonStore</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Về HexonStore</h3>
+                    <ul class="footer-links">
+                        <li><a href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="tintuc.html">Tin tức</a></li>
+                        <li><a href="tuyendung.html">Tuyển dụng</a></li>
+                        <li><a href="gioithieu.html#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Hỗ trợ khách hàng</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html#buy">Hướng dẫn mua hàng</a></li>
+                        <li><a href="faq.html#return">Chính sách đổi trả</a></li>
+                        <li><a href="faq.html#warranty">Bảo hành sản phẩm</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Liên hệ</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Thanh Xuân, Hà Nội</li>
+                        <li><i class="fas fa-phone"></i> 123456789</li>
+                        <li><i class="fas fa-envelope"></i> info@hexonstore.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Địa chỉ</h3>
+                    <div class="address-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17718.441070286175!2d105.82730129913115!3d20.99891379044362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac71752d8f79%3A0xd2ec575c01017afa!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gUXXhu5FjIETDom4gKE5FVSk!5e0!3m2!1svi!2s!4v1745337197504!5m2!1svi!2s" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HexonStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        //Javascript chỉnh cho responsive
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            document.querySelectorAll('.nav-menu li a').forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+            
+            const accordions = document.querySelectorAll('.accordion');
+            
+            accordions.forEach(accordion => {
+                accordion.addEventListener('click', function() {
+  
+                    this.classList.toggle('active');
+                    
+                    const panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+            
+            if (window.location.hash) {
+                const targetElement = document.querySelector(window.location.hash);
+                if (targetElement) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }, 200);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexonStore | Hightech equipment </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar-->
+<div class="navbar">
+    <nav>
+        <div class="logo-container">
+            <a href="homepage.html" class="logo">
+                <img src="image/logo.svg" alt="logo" width="45px">
+                <span class="logo-text">HEXONSTORE</span>
+            </a>
+        </div>
+        
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+            <li><a href="tintuc.html">TIN TỨC</a></li>
+            <li><a href="tuyendung.html">TUYỂN DỤNG</a></li>
+            <li><a href="lienhe.html">LIÊN HỆ</a></li>
+            <li><a href="sanpham.html">SẢN PHẨM</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="login.html">ĐĂNG NHẬP</a></li>
+        </ul>
+        
+        <a href="giohang.html" class="cart-icon">
+            <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+        </a>
+    </nav>
+</div>
+<script src="/js/navbar.js"></script>
+
+    <section class="contact-container">
+        <div class="contact-header">
+            <h1>Liên Hệ Với Chúng Tôi</h1>
+            <p>Bạn có thắc mắc hoặc cần hỗ trợ? Đừng ngần ngại liên hệ với chúng tôi. Đội ngũ HexonStore luôn sẵn sàng phục vụ bạn!</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>Địa Chỉ</h3>
+                        <p>123 Đường ABC, Thanh Xuân, Hà Nội</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>Điện Thoại</h3>
+                        <p>123456789</p>
+                        <p>987654321 (Hotline)</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>Email</h3>
+                        <p>info@hexonstore.com</p>
+                        <p>support@hexonstore.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-details">
+                        <h3>Giờ Làm Việc</h3>
+                        <p>Thứ 2 - Thứ 6: 8:00 - 18:00</p>
+                        <p>Thứ 7: 8:00 - 12:00</p>
+                        <p>Chủ Nhật: Nghỉ</p>
+                    </div>
+                </div>
+
+                <div class="social-links-contact">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Gửi Tin Nhắn Cho Chúng Tôi</h2>
+                <form id="contactForm" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name" class="required-field">Họ và tên</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Nhập họ và tên của bạn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="required-field">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Nhập số điện thoại của bạn">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="required-field">Nội dung tin nhắn</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Hãy mô tả chi tiết nội dung bạn muốn liên hệ..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Gửi Tin Nhắn</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <h2>Bản Đồ Chỉ Đường</h2>
+            <div class="contact-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17718.441070286175!2d105.82730129913115!3d20.99891379044362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac71752d8f79%3A0xd2ec575c01017afa!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gUXXhu5FjIETDom4gKE5FVSk!5e0!3m2!1svi!2s!4v1745337197504!5m2!1svi!2s" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Về HexonStore</h3>
+                    <ul class="footer-links">
+                        <li><a href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="tintuc.html">Tin tức</a></li>
+                        <li><a href="tuyendung.html">Tuyển dụng</a></li>
+                        <li><a href="gioithieu.html#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Hỗ trợ khách hàng</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html#buy">Hướng dẫn mua hàng</a></li>
+                        <li><a href="faq.html#return">Chính sách đổi trả</a></li>
+                        <li><a href="faq.html#warranty">Bảo hành sản phẩm</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Liên hệ</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Thanh Xuân, Hà Nội</li>
+                        <li><i class="fas fa-phone"></i> 123456789</li>
+                        <li><i class="fas fa-envelope"></i> info@hexonstore.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Địa chỉ</h3>
+                    <div class="address-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17718.441070286175!2d105.82730129913115!3d20.99891379044362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac71752d8f79%3A0xd2ec575c01017afa!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gUXXhu5FjIETDom4gKE5FVSk!5e0!3m2!1svi!2s!4v1745337197504!5m2!1svi!2s" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HexonStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

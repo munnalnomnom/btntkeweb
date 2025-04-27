@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexonStore | Hightech equipment </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    /* làm responsive */
+    /* Responsive Media Queries for HexonStore News Page */
+
+@media (max-width: 1200px) {
+  .articles {
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .collumnArticle, .janna {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 992px) {
+  
+  .category-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .category-tab {
+    margin: 5px;
+  }
+  
+}
+
+@media (max-width: 768px) {  
+  .articles {
+    grid-template-columns: 1fr;
+  }
+  
+  .collumnArticle, .janna {
+    width: 100%;
+  }
+  
+  .articles {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .category-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {    
+  article img {
+    height: 180px;
+  }
+  
+  .titleArticle {
+    font-size: 18px;
+  }
+  
+  article h3 {
+    font-size: 14px;
+  }
+  
+  .filter-select {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ddd !important;
+    padding: 5px;
+    background: #f5f5f5 !important;
+  }
+  
+  .category-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .category-tab {
+    text-align: center;
+    margin: 5px 0;
+    padding: 8px 0;
+  }
+  
+}
+
+/* Additional styles for the article grid layout */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .janna {
+    grid-column: span 2;
+  }
+}
+</style>
+<body>
+<!-- Navbar -->
+<div class="navbar">
+    <nav>
+        <div class="logo-container">
+            <a href="homepage.html" class="logo">
+                <img src="image/logo.svg" alt="logo" width="45px">
+                <span class="logo-text">HEXONSTORE</span>
+            </a>
+        </div>
+        
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+        <ul class="nav-menu">
+            <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+            <li><a href="tintuc.html">TIN TỨC</a></li>
+            <li><a href="tuyendung.html">TUYỂN DỤNG</a></li>
+            <li><a href="lienhe.html">LIÊN HỆ</a></li>
+            <li><a href="sanpham.html">SẢN PHẨM</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="login.html">ĐĂNG NHẬP</a></li>
+        </ul>
+        
+        <a href="giohang.html" class="cart-icon">
+            <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+        </a>
+    </nav>
+</div>
+<script src="/js/navbar.js"></script>
+    <section class="featured-products">
+        <div class="featured-container">
+            <h2 class="featured-title">Tin tức mới nhất</h2>
+        </div>
+    </section>
+    <div class="article">
+        <div class="category-tabs">
+            <select class="filter-select" style="border: none; background: none;" >
+                <option value="">Sắp xếp</option>
+                <option value="newest">Mới nhất</option>
+                <option value="price-asc">Cũ nhất</option>
+            </select>
+            <a href="tintuc.html" class="category-tab active">Tất cả</a>
+            <a href="tintuc.html?category=important" class="category-tab">Tin quan trọng</a>
+            <a href="tintuc.html?category=influencer" class="category-tab">Người nổi tiếng và Hexon</a>
+            <a href="tintuc.html?category=kinhdoanh" class="category-tab">Tin kinh doanh</a>
+        </div>
+
+        
+    </div>
+    <div class="articles">
+        <a href="elonthamhexon.html" class="collumnArticle"><article>
+            <img src="image/hinhanhcuahang.jpg" alt="">
+            <div class="footerArticle">
+                <div class="titleArticle">Elon Múk tham quan HexonStore </div>
+                <h3>Ngày 27/12/2036 tỉ phú Elon Múk đã đến thăm HexonStore cơ sở Thanh Xuân, Hà N...</h3>
+                <div class="article-time"> <i class="fa fa-calendar"></i> 27/12/2036</div>
+                <div class="newsMeta">Người nổi tiếng nói gì về Hexon</div>
+            </div>
+        </article></a>
+        <a href="tintucsinhnhat.html" class="collumnArticle">
+            <article>
+                <img src="image/anmung.jpg" alt="">
+                <div class="footerArticle">
+                    <div class="titleArticle">Mừng sinh nhật HexonGroup</div>
+                    <h3>Ngày 18/10/2036 HexonStore đã tổ chức sinh nhật lần thứ 11 với sự tham gia của...</h3>
+                    <div class="article-time"> <i class="fa fa-calendar"></i> 18/10/2036</div>
+                    <div class="newsMeta">
+                        <p>Tin tức quan trọng</p>
+                    </div>
+                </div>
+            </article>
+        </a>
+
+        <a href="" class="collumnArticle">
+            <article>
+                <img src="image/hoptac.jpg" alt="">
+                <div class="footerArticle">
+                    <div class="titleArticle">Hexxon Store x Logitech </div>
+                    <h3> Hành trình nâng tầm trải nghiệm khách hàng của HexonStore và con đường nâng tầm...</h3>
+                    <div class="article-time"> <i class="fa fa-calendar"></i> 27/12/2036</div>
+                    <div class="newsMeta">
+                        <p>Tin kinh doanh</p>
+                    </div>
+                </div>
+            </article>
+        </a>
+
+        <a href="" class="collumnArticle"><article>
+            <img src="image/hopcongty.jpg" alt="">
+            <div class="footerArticle">
+                <div class="titleArticle">HexonStore "thay áo mới"</div>
+                <h3>23/8/2036 hội đồng HexonStore đã quyết định thay thế hình ảnh của HexonStore...</h3>
+                <div class="article-time"> <i class="fa fa-calendar"></i> 27/12/2036</div>
+                <div class="newsMeta">
+                    <p>Tin tức quan trọng</p>
+                </div>
+            </div>
+        </article>
+    </a>
+    <a href="" class="collumnArticle">
+        <article>
+            <img src="image/salevip.jpg" alt="">
+            <div class="footerArticle">
+                <div class="titleArticle">Khuyến mại nóng hổi</div>
+                <h3>Chương trình khuyến mại chỉ có tại HexonStore với ưu đãi lên đến 98% giá trị sản phẩm...</h3>
+                <div class="article-time"> <i class="fa fa-calendar"></i> 27/12/2036</div>
+                <div class="newsMeta">
+                    <p>Tin tức quan trọng</p>
+                </div>
+            </div>
+        </article>
+        
+    </a>
+    <a href="" class="janna">
+        <article>
+            <img src="image/specialnews.avif" alt="">
+            <div class="footerArticle">
+                <div class="titleArticle">Bản tin đặc biệt</div>
+                <h3>TIN MỚI NHẬN:Đặc nhiệm Janna của Hexon Store đang lao vào 1 cơn giông bất ngờ...</h3>
+                <div class="article-time"> <i class="fa fa-calendar"></i> 27/12/2036</div>
+                <div class="newsMeta">
+                    <p>Tin tức quan trọng</p>
+                </div>
+            </div>
+        </article>
+    </a>
+    <a href="" class="collumnArticle"> <article>
+        <img src="image/hoidap.avif" alt="">
+        <div class="footerArticle">
+            <div class="titleArticle">Phỏng vấn tại HexonStore</div>
+            <h3>Nhằm nâng cao chất lượng trải nghiệm của khách hàng, vào ngày 27/6/2036 chúng tôi...</h3>
+            <div class="article-time"> <i class="fa fa-calendar"></i> 27/12/2036</div>
+            <div class="newsMeta">
+                <p>Tin tức quan trọng</p>
+            </div>
+        </div>
+    </article></a>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Về HexonStore</h3>
+                <ul class="footer-links">
+                    <li><a href="gioithieu.html">Giới thiệu</a></li>
+                    <li><a href="tintuc.html">Tin tức</a></li>
+                    <li><a href="tuyendung.html">Tuyển dụng</a></li>
+                    <li><a href="gioithieu.html#contact">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul class="footer-links">
+                    <li><a href="faq.html#buy">Hướng dẫn mua hàng</a></li>
+                    <li><a href="faq.html#return">Chính sách đổi trả</a></li>
+                    <li><a href="faq.html#warranty">Bảo hành sản phẩm</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Liên hệ</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Thanh Xuân, Hà Nội</li>
+                    <li><i class="fas fa-phone"></i> 123456789</li>
+                    <li><i class="fas fa-envelope"></i> info@hexonstore.com</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Địa chỉ</h3>
+                <div class="address-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17718.441070286175!2d105.82730129913115!3d20.99891379044362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac71752d8f79%3A0xd2ec575c01017afa!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gUXXhu5FjIETDom4gKE5FVSk!5e0!3m2!1svi!2s!4v1745337197504!5m2!1svi!2s" 
+                        width="100%" 
+                        height="150" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HexonStore. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

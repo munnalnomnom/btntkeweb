@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexonStore | Thiết bị công nghệ cao cấp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Animation */
+        .animate-left { animation: fadeLeft 0.8s ease-out; }
+        .animate-right { animation: fadeRight 0.8s ease-out; }
+        .animate-up { animation: fadeUp 0.5s ease-out; }
+        
+        @keyframes fadeLeft { from { opacity: 0; transform: translateX(-30px); } }
+        @keyframes fadeRight { from { opacity: 0; transform: translateX(30px); } }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } }
+        
+        .hero-img img { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 50% { transform: translateY(-15px); } }
+        
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-3px);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+        
+        .product-image img {
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+        
+        .category-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .category-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .brand-logo img {
+            filter: grayscale(80%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .brand-logo:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-menu li a:hover::after {
+            width: 40px;
+        }
+        
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .benefit-item {
+            background: #141414;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .benefit-icon {
+            font-size: 28px;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar-->
+    <div class="navbar">
+        <nav>
+            <div class="logo-container">
+                <a href="homepage.html" class="logo">
+                    <img src="image/logo.svg" alt="logo" width="45px">
+                    <span class="logo-text">HEXONSTORE</span>
+                </a>
+            </div>
+            
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                <li><a href="tintuc.html">TIN TỨC</a></li>
+                <li><a href="tuyendung.html">TUYỂN DỤNG</a></li>
+                <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="login.html">ĐĂNG NHẬP</a></li>
+            </ul>
+            
+            <a href="giohang.html" class="cart-icon">
+                <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+            </a>
+        </nav>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text animate-left">
+                    <h1>Shop đồ công nghệ cao<br><span>Đảm bảo chất lượng</span></h1>
+                    <p>Tại HexonStore, chúng tôi tự hào là cửa hàng trực tuyến chuyên cung cấp các sản phẩm công nghệ cao cấp như: laptop, điện thoại thông minh, máy tính bảng và nhiều thiết bị điện tử khác. Chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng nhất với giá cả hợp lý.</p>
+                    <p>Với phương châm "Khách hàng là trung tâm", HexonStore không ngừng nỗ lực để đáp ứng mọi nhu cầu mua sắm và trải nghiệm dịch vụ tốt nhất.
+                        Hãy đến với HexonStore và tận hưởng thế giới công nghệ đỉnh cao ngay hôm nay!</p>
+                    <div class="hero-buttons">
+                        <a href="sanpham.html" class="btn-primary">Khám phá ngay</a>
+                        <a href="gioithieu.html" class="btn-secondary">Về chúng tôi</a>
+                    </div>
+                </div>
+                <div class="hero-img animate-right">
+                    <img src="/image/banner2.webp" alt="Thiết bị công nghệ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="benefits-container">
+            <div class="benefit-item animate-up">
+                <div class="benefit-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3 class="benefit-title">Giao hàng toàn quốc</h3>
+                <p class="benefit-desc">Miễn phí giao hàng nội thành Hà Nội và TP.HCM cho đơn từ 2 triệu. Giao hàng toàn quốc trong 24-48h.</p>
+            </div>
+            <div class="benefit-item animate-up">
+                <div class="benefit-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="benefit-title">Bảo hành chính hãng</h3>
+                <p class="benefit-desc">Tất cả sản phẩm đều được bảo hành chính hãng 12-24 tháng với quy trình xử lý nhanh chóng.</p>
+            </div>
+            <div class="benefit-item animate-up">
+                <div class="benefit-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h3 class="benefit-title">Đổi trả linh hoạt</h3>
+                <p class="benefit-desc">Chính sách đổi trả trong 30 ngày. Hoàn tiền 100% nếu sản phẩm gặp lỗi từ nhà sản xuất.</p>
+            </div>
+            <div class="benefit-item animate-up">
+                <div class="benefit-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="benefit-title">Tư vấn chuyên nghiệp</h3>
+                <p class="benefit-desc">Đội ngũ chuyên viên tư vấn giàu kinh nghiệm, sẵn sàng hỗ trợ 24/7 qua hotline và live chat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mục sản phẩm nổi bật -->
+    <section class="featured-products">
+        <div class="featured-container">
+            <h2 class="featured-title">Sản Phẩm Nổi Bật</h2>
+            
+            <div class="product-slider">
+                <!-- Radio buttons ẩn để điều khiển slider -->
+                <input type="radio" name="slider" id="slide1" class="slide-radio" checked>
+                <input type="radio" name="slider" id="slide2" class="slide-radio">
+                <input type="radio" name="slider" id="slide3" class="slide-radio">
+                <input type="radio" name="slider" id="slide4" class="slide-radio">
+                <input type="radio" name="slider" id="slide5" class="slide-radio">
+                
+                <!-- Nút điều hướng slider -->
+                <div class="slider-controls">
+                    <label for="slide5" class="slide-label prev" id="prev-slide1"><i class="fas fa-chevron-left"></i></label>
+                    <label for="slide2" class="slide-label next" id="next-slide1"><i class="fas fa-chevron-right"></i></label>
+                </div>
+                
+                <div class="slider-controls">
+                    <label for="slide1" class="slide-label prev" id="prev-slide2"><i class="fas fa-chevron-left"></i></label>
+                    <label for="slide3" class="slide-label next" id="next-slide2"><i class="fas fa-chevron-right"></i></label>
+                </div>
+                
+                <div class="slider-controls">
+                    <label for="slide2" class="slide-label prev" id="prev-slide3"><i class="fas fa-chevron-left"></i></label>
+                    <label for="slide4" class="slide-label next" id="next-slide3"><i class="fas fa-chevron-right"></i></label>
+                </div>
+                
+                <div class="slider-controls">
+                    <label for="slide3" class="slide-label prev" id="prev-slide4"><i class="fas fa-chevron-left"></i></label>
+                    <label for="slide5" class="slide-label next" id="next-slide4"><i class="fas fa-chevron-right"></i></label>
+                </div>
+                
+                <div class="slider-controls">
+                    <label for="slide4" class="slide-label prev" id="prev-slide5"><i class="fas fa-chevron-left"></i></label>
+                    <label for="slide1" class="slide-label next" id="next-slide5"><i class="fas fa-chevron-right"></i></label>
+                </div>
+                
+                <!-- Slides -->
+                <div class="product-slides">
+                    <!-- Slide 1 -->
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-tag">HOT</div>
+                                <img src="/image/macprom4.jpg" alt="MacBook Pro M4">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Laptop</div>
+                                <h3 class="product-name">MacBook Pro M4</h3>
+                                <p class="product-description">
+                                    MacBook Pro mới nhất với chip M4, 16GB RAM, 512GB SSD, màn hình Retina 14 inch, thời lượng pin lên đến 20 giờ.
+                                </p>
+                                <div class="product-price">
+                                    <span class="old-price">41.990.000đ</span>
+                                    39.990.000đ
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(120)</span>
+                                </div>
+                                <a href="macbook-pro-m4.html" class="product-button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-tag">NEW</div>
+                                <img src="/image/samsungs25.jpg" alt="Samsung Galaxy S25 Ultra">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Smartphone</div>
+                                <h3 class="product-name">Samsung Galaxy S25 Ultra</h3>
+                                <p class="product-description">
+                                    Smartphone cao cấp với màn hình AMOLED 6.8 inch, camera 200MP, RAM 16GB, bộ nhớ 512GB và pin 5000mAh.
+                                </p>
+                                <div class="product-price">
+                                    <span class="old-price">32.990.000đ</span>
+                                    29.990.000đ
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(85)</span>
+                                </div>
+                                <a href="galaxy-s25.html" class="product-button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-tag">SALE</div>
+                                <img src="/image/dellxps16.avif" alt="Dell XPS 16">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Laptop</div>
+                                <h3 class="product-name">Dell XPS 16</h3>
+                                <p class="product-description">
+                                    Laptop cao cấp với màn hình OLED 16 inch, chip Intel Core i9, 32GB RAM, 1TB SSD và card đồ họa RTX 4080.
+                                </p>
+                                <div class="product-price">
+                                    <span class="old-price">49.990.000đ</span>
+                                    45.990.000đ
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(64)</span>
+                                </div>
+                                <a href="dell-xps-16.html" class="product-button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-tag">BEST SELLER</div>
+                                <img src="/image/headphoneWH.avif" alt="Sony WH-1000XM5">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Tai nghe</div>
+                                <h3 class="product-name">Sony WH-1000XM5</h3>
+                                <p class="product-description">
+                                    Tai nghe chống ồn cao cấp với thời lượng pin 30 giờ, âm thanh Hi-Res, kết nối Bluetooth 5.2 và tính năng chống ồn tiên tiến.
+                                </p>
+                                <div class="product-price">
+                                    <span class="old-price">8.990.000đ</span>
+                                    7.490.000đ
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(210)</span>
+                                </div>
+                                <a href="sony-wh-1000xm5.html" class="product-button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5 -->
+                    <div class="product-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-tag">LIMITED</div>
+                                <img src="/image/ipadm4.JPG" alt="iPad Pro M4">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-category">Tablet</div>
+                                <h3 class="product-name">iPad Pro M4</h3>
+                                <p class="product-description">
+                                    Máy tính bảng cao cấp với chip M4, màn hình 11 inch mini-LED, 16GB RAM, 256GB bộ nhớ và hỗ trợ Apple Pencil Pro.
+                                </p>
+                                <div class="product-price">
+                                    <span class="old-price">28.990.000đ</span>
+                                    27.790.000đ
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(98)</span>
+                                </div>
+                                <a href="ipad-pro-m4.html" class="product-button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Indicators -->
+                <div class="slide-indicators">
+                    <label for="slide1" class="indicator-label indicator-1"></label>
+                    <label for="slide2" class="indicator-label indicator-2"></label>
+                    <label for="slide3" class="indicator-label indicator-3"></label>
+                    <label for="slide4" class="indicator-label indicator-4"></label>
+                    <label for="slide5" class="indicator-label indicator-5"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="smallContainer">
+            <h2 class="category-title">Danh Mục Sản Phẩm</h2>
+            <div class="category-grid">
+                <a href="sanpham.html?category=smartphone" class="category-item">
+                    <img src="/image/dienthoai.jpg" alt="Điện thoại">
+                    <div class="category-overlay">
+                        <h3>Điện thoại</h3>
+                        <p>Smartphone cao cấp từ các thương hiệu uy tín toàn cầu</p>
+                    </div>
+                </a>
+                <a href="sanpham.html?category=laptop" class="category-item">
+                    <img src="/image/laptop2.png" alt="Laptops">
+                    <div class="category-overlay">
+                        <h3>Laptop</h3>
+                        <p>Đa dạng laptop cho công việc, học tập và giải trí</p>
+                    </div>
+                </a>
+                <a href="sanpham.html?category=accessories" class="category-item">
+                    <img src="/image/keyboard.png" alt="Phụ kiện">
+                    <div class="category-overlay">
+                        <h3>Phụ kiện</h3>
+                        <p>Bàn phím, chuột, tai nghe và các phụ kiện cao cấp</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thương hiệu đối tác -->
+    <section class="brands">
+        <div class="smallContainer">
+            <h2 class="brands-title">Thương hiệu đối tác</h2>
+            <div class="brands-slider">
+                <a href="sanpham.html?brand=asus" class="brand-logo">
+                    <img src="/image/ASUS logo grey.png" alt="ASUS">
+                </a>
+                <a href="sanpham.html?brand=dell" class="brand-logo">
+                    <img src="/image/Delllogo.png" alt="Dell">
+                </a>
+                <a href="sanpham.html?brand=lenovo" class="brand-logo">
+                    <img src="/image/Lenovologo.png" alt="Lenovo">
+                </a>
+                <a href="sanpham.html?brand=logitech" class="brand-logo">
+                    <img src="/image/logitechlogo.png" alt="Logitech">
+                </a>
+                <a href="sanpham.html?brand=samsung" class="brand-logo">
+                    <img src="/image/samsunglogo.png" alt="Samsung">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Về HexonStore</h3>
+                    <ul class="footer-links">
+                        <li><a href="gioithieu.html">Lịch sử phát triển</a></li>
+                        <li><a href="tintuc.html">Tin tức công nghệ</a></li>
+                        <li><a href="tuyendung.html">Cơ hội nghề nghiệp</a></li>
+                        <li><a href="gioithieu.html#contact">Thông tin liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Chính sách & Dịch vụ</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html#buy">Hướng dẫn mua hàng</a></li>
+                        <li><a href="faq.html#return">Chính sách đổi trả</a></li>
+                        <li><a href="faq.html#warranty">Quy định bảo hành</a></li>
+                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Thông tin liên hệ</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Tòa nhà HexonTech, 123 Đường ABC, Quận Thanh Xuân, Hà Nội</li>
+                        <li><i class="fas fa-phone"></i> Hotline: 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> contact@hexonstore.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Vị trí cửa hàng</h3>
+                    <div class="address-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17718.441070286175!2d105.82730129913115!3d20.99891379044362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac71752d8f79%3A0xd2ec575c01017afa!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gUXXhu5FjIETDom4gKE5FVSk!5e0!3m2!1svi!2s!4v1745337197504!5m2!1svi!2s" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HexonStore. Bản quyền thuộc về Công ty Cổ phần Công nghệ HexonTech.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto slider for products
+            let currentSlide = 1;
+            const totalSlides = 5;
+            
+            const autoSlide = () => {
+                currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+                document.getElementById(`slide${currentSlide}`).checked = true;
+            };
+            
+            setInterval(autoSlide, 5000);
+        });
+    </script>
+</body>
+</html>
